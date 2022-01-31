@@ -15,13 +15,25 @@ var filteredIconList = [];
 var filteredHighTemp = [];
 var filteredLowTemp = [];
 
-filter();
-function filter() {
-  filteredCityList = [];
-  filteredConditionList = [];
-  filteredIconList = [];
-  filteredHighTemp = [];
-  filteredLowTemp = [];
-  for(var i = 0 ); i = forecastNumberList.length
+onEvent("forecastButton", "click", function( ) {
 
-}
+filteredCityList = [];
+filteredConditionList = [];
+filteredIconList = [];
+filteredHighTemp = [];
+filteredLowTemp = [];
+for(var i = 0; i <= forecastNumberList.length; i++){
+    if(forecastNumberList[i] == 2){
+      appendItem(filteredCityList, cityList[i]);
+      appendItem(filteredConditionList, conditionList[i]);
+      appendItem(filteredIconList, iconList);
+      }
+    }
+    
+    
+      
+    
+
+  
+});
+
