@@ -27,6 +27,8 @@ for(var i = 0; i <= forecastNumberList.length; i++){
       appendItem(filteredCityList, cityList[i]);
       appendItem(filteredConditionList, conditionList[i]);
       appendItem(filteredIconList, iconList);
+      appendItem(filteredHighTemp, highTempList);
+      appendItem(filteredLowTemp, lowTempList);
       }
     }
     
