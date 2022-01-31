@@ -14,3 +14,14 @@ var filteredConditionList = [];
 var filteredIconList = [];
 var filteredHighTemp = [];
 var filteredLowTemp = [];
+
+filter();
+function filter() {
+  filteredCityList = [];
+  filteredConditionList = [];
+  filteredIconList = [];
+  filteredHighTemp = [];
+  filteredLowTemp = [];
+  for(var i = 0 ); i = forecastNumberList.length
+
+}
