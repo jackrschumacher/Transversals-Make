@@ -22,20 +22,25 @@ filteredConditionList = [];
 filteredIconList = [];
 filteredHighTemp = [];
 filteredLowTemp = [];
-
+rand = randomNumber(0,122);
 for(var i = 0; i <= forecastNumberList.length; i++){
     if(forecastNumberList[i] == 2){
-      rand = randomNumber(0,122);
+      
       appendItem(filteredCityList, cityList[i]);
       appendItem(filteredConditionList, conditionList[i]);
       appendItem(filteredIconList, iconList[i]);
       appendItem(filteredHighTemp, highTempList[i]);
       appendItem(filteredLowTemp, lowTempList[i]);
-      
+      setProperty("cityOutput", "text", filteredCityList[rand]);
+      setProperty("highTempOutput", "text", filteredHighTemp[rand]);
+      setProperty("lowTempOutput", "text", filteredLowTemp[rand]);
+      setProperty("conditionOutput", "text", filteredConditionList[rand]);
+      setProperty("iconOutput", "image", filteredIconList[rand]);
       }
-    setProperty("cityOutput", "text", filteredCityList[rand]);
-    setProperty("highTempOutput", "text", filteredCityList[rand]);
-    setProperty
+    
+    
+    
+    
     
     }
 });
