@@ -15,23 +15,23 @@ var filteredIconList = [];
 var filteredHighTemp = [];
 var filteredLowTemp = [];
 
-onEvent("forecastButton", "click", function( ) {
+onEvent("forecastButton", "click", function( ) { //When Forecast Button is clicked
 
-filteredCityList = [];
+filteredCityList = []; //Reset Filtered Variables value to zero
 filteredConditionList = [];
 filteredIconList = [];
 filteredHighTemp = [];
 filteredLowTemp = [];
-rand = randomNumber(0,122);
-for(var i = 0; i <= forecastNumberList.length; i++){
-    if(forecastNumberList[i] == 2){
+rand = randomNumber(0,122); //Set Random values between Zero and 122 (number of tommorow Forecasts in the data set)
+for(var i = 0; i <= forecastNumberList.length; i++){ //Loops through the data set forecast numbers while the index values is less than the length of the list
+    if(forecastNumberList[i] == 2){ //Filters the list based on if the index value of forecastNumbersList is equal to 2
       
-      appendItem(filteredCityList, cityList[i]);
+      appendItem(filteredCityList, cityList[i]); //Append an Item to Filtered lists based on the value of the original list[i]
       appendItem(filteredConditionList, conditionList[i]);
       appendItem(filteredIconList, iconList[i]);
       appendItem(filteredHighTemp, highTempList[i]);
       appendItem(filteredLowTemp, lowTempList[i]);
-      setProperty("cityOutput", "text", filteredCityList[rand]);
+      setProperty("cityOutput", "text", filteredCityList[rand]); //Set labels on the screen to filtered lists
       setProperty("highTempOutput", "text", filteredHighTemp[rand]);
       setProperty("lowTempOutput", "text", filteredLowTemp[rand]);
       setProperty("conditionOutput", "text", filteredConditionList[rand]);
