@@ -5,7 +5,7 @@ var conditionList = getColumn("Daily Weather", "Condition Description");
 var iconList = getColumn("Daily Weather", "Icon");
 var highTempList = getColumn("Daily Weather", "High Temperature");
 var lowTempList = getColumn("Daily Weather", "Low Temperature");
-var rand = randomNumber(0,610);
+var rand = 0;
 
 //Initilize filtered list variables
 
@@ -22,20 +22,21 @@ filteredConditionList = [];
 filteredIconList = [];
 filteredHighTemp = [];
 filteredLowTemp = [];
+
 for(var i = 0; i <= forecastNumberList.length; i++){
     if(forecastNumberList[i] == 2){
+      rand = randomNumber(0,122);
       appendItem(filteredCityList, cityList[i]);
       appendItem(filteredConditionList, conditionList[i]);
       appendItem(filteredIconList, iconList[i]);
       appendItem(filteredHighTemp, highTempList[i]);
       appendItem(filteredLowTemp, lowTempList[i]);
-      }
-    }
-    
-    
       
+      }
+    setProperty("cityOutput", "text", filteredCityList[rand]);
+    setProperty("highTempOutput", "text", filteredCityList[rand]);
+    setProperty
     
-
-  
+    }
 });
 
